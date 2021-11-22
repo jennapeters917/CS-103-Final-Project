@@ -1,7 +1,7 @@
 *{
 	text-align: center;
 	letter-spacing: .1rem;
-	font-size: calc(5px + .8vw))
+	font-size: 17px;
 }
 
 
@@ -37,19 +37,19 @@ li.nav{
   	list-style-type: none;
 	padding-left: 2vw; 
 	padding-right: 2vw;
-	font-size: calc(5px + .8vw);
+	font-size: 17px;
 	
   	
 }
 
-a:hover {
+.navlink:hover {
 	background-color: saddlebrown;
 	color: white;
 	
 	
 }
 
-a {
+.navlink {
 
   text-decoration: none;
   color: saddlebrown;
@@ -83,13 +83,14 @@ img {
 }
 
 #introduction {
-	padding-bottom: 4vw;
+	padding-bottom: 2vw;
 }
 
 footer {
 	color: white;
 	background-color: saddlebrown;
-	padding: 4vw;
+	 padding-top: 2vw;
+  	padding-bottom: 2vw;
 
 }
 
@@ -110,6 +111,44 @@ footer {
 	margin: 1vw;
 
 }
+
+.section1{
+	padding-bottom: 2vw;
+}
+
+#paper{
+	border: 1px solid black;
+	max-width: 80%;
+    max-height: 80%;
+
+}
+
+.img-caption{
+	font-size: 13px;
+}
+
+.quote #quote em{
+	
+	line-height: 2;
+	font-size: calc(20px + .8vw);
+	font-family: "Snell Roundhand", cursive;
+
+#quote{
+	line-height: 2;
+	font-size: calc(20px + .8vw);
+
+}
+
+#top-bar-label{
+	padding: 1vw;
+}
+
+h2{
+	padding-top: 2vw;
+	}
+
+
+
 
 
 
