@@ -17,7 +17,7 @@ crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet"> 
-
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
 
 </head>
@@ -30,7 +30,8 @@ crossorigin="anonymous">
 
 	<header>
 	<div id = "head">
-      <h1> A J I </h1>
+    <h1 id = "web-title"> A J I </h1>
+    
       <p>A glance at the portfolios of three students with very different academic interests.</p>
     </div>
 	</header>
@@ -54,7 +55,7 @@ crossorigin="anonymous">
 	<script>
 	
 	new TypeIt("#welcome", {speed: 200, lifelike: true,})
-		.type("An Informal Introduction")
+		.type("Jenna's Porfolio")
 		.go();
 		
 	</script>
@@ -89,7 +90,7 @@ crossorigin="anonymous">
 		with people I align with politically and socially. Not because I disagree with them, but because I always discuss the cost
 		of any policy, even if its one I support.</p>
 		
-		<img src = "images/rates_graph.png">
+		<img src = "images/rates_graph.png" alt = "graph of credit delinquencey rates and debt overtime">
 		<p class = "img-caption">This is a graph I created with python for my current research project. We are working
 		with consumer delinquency rates. Our interests are in the large spikes you see, and if they lead to
 		increases in public debt. The largest spike you see in 2008 is due to the housing market crash, delinquencies rates
@@ -167,8 +168,8 @@ crossorigin="anonymous">
 		<img src = "images/gabe.png" alt = "math equations for gabriels horn">
 		<p class = "img-caption">Gabriel's Horn equations written by Jenna in LateX.</p>
 		<h4>My Favorite Math Problem</h4>
-		<p> Gabriels horn is a famous Calc 3 problem. These equations 
-		calculate the volume and surface area of a long horn horn shape as the tail of the horn 
+		<p> Gabriel's horn is a famous Calc 2 problem. These equations 
+		calculate the volume and surface area of a long horn shape as the tail of the horn 
 		tends to infinity. When you calculate the surface area using indefinite integrals, you will find that it is infinite. 
 		However, when you calculate volume, is just simply &#960;. This is a mind-bending idea. How is it possible
 		for a solid to have infinite area, but a finite volume? If you know a bit of Calc 2, this
@@ -194,35 +195,25 @@ crossorigin="anonymous">
 		<p>Coding is not only something I study, but it has also become my job, and now my 
 		hobby. I am currently in two CS classes and I am a CA for another. Coding has begin to 
 		bleed into my dreams. I wake up in the middle of the night because my mind started to code. 
-		I have nightmares of null-pointer exceptions. Once I had a nightmare where Dr. Sullivan made me retake the CS 112 midterm
-		in the room we have our CS 111 staff meetings. Despite all this, I really do 
+		I have nightmares of null-pointer exceptions. Despite all this, I really do 
 		like to code.</p>
 
-		<p>
-		I had never coded in my life before I had taken CS 111. But I took to it really quickly, and a year
-		later im holding my own in a 500 level CS course. Having a really strong background in math
-		helps, but I think anyone with a creative mind should try it out! 
-		</p>
 		
-		<img src = "images/code.png">
+		
+		<img src = "images/code.png" alt = "block of code">
 		<p class = "img-caption">An algorithm written by Jenna.</p>
 		<p> This block of code is a triumph and defeat for me. I spent a long time
 		designing and tweaking this algorithm. But I was so relieved when It worked. The algorithm creates a 
-		two clusters of points about two lines you can specify the slope and intercept for. I made it for my CS 506 class.
-		After spending hours tweaking and tuning it to get better clusters, I learned from a classmate that most people
-		just created random blobs with NumPy, which took maybe a minute to type out.I felt my soul slip out of my body. Hours. Wasted. 
-		A small part of me was proud of myself for writing an algorithm on my own instead of using NumPy, but I would rather have those hours 
-		back than this algorithm. This code block is a wonderful example of my love-hate
-		relationship with coding.</p>
+		two clusters of points about two lines, which you can specify the slope and intercept for. I wrote it for my CS 506 class. Apparently we
+		could just use a method from the NumPy library, but I wrote this before I knew. While Im upset by the lost time,
+		I'm proud I could write an algorithm on my own.
+		</p>
 		
 		</div>
 
 		<div id = "content2" class = "col-lg-6">
-		<img src = "images/ORB.png">
-		<p class = "img-caption">A network graph I made in Python for my Data Science class. The rim of the orb are points and names of
-		authors of academic papers in Data Science. If two authors have worked together, there is a line
-		drawn between them. I didn't actually need to plot this graph, I did by accident before I knew. But
-		I thought it was ominous and strange looking, so I decided to save it.</p>
+		<img src = "images/ORB.png" alt = "large black orb">
+		<p class = "img-caption">A network graph I made in Python for my Data Science class.</p>
 		
 		<h4>What progress have I made in a year?</h4>
 		<p>A bit over a year ago I began CS 111 and coded for the first time in my life. Since then
@@ -234,11 +225,7 @@ crossorigin="anonymous">
 		I can use Stata, but I have a hate-only relationship with it as Python can do everything stata does, and it has horrible
 		documentation.</p>
 		
-		<p>My background in coding helped me quickly pick up things like LateX and HTML/CSS. While coding
-		with LateX and HTML/CSS has been less logic based and more about syntax so far, orienting 
-		myself to a language is much easier. Coding isn't just a skill, its an exercise. It trains your
-		brain to think in different ways, and tunes your mind to pickup things more quickly than
-		you did before.</p>
+
 		</div>	
 	
 	</div>
