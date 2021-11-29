@@ -1,13 +1,13 @@
 *{
 	text-align: center;
 	letter-spacing: .1rem;
-	font-size: 17px;
+	font-size: calc(8px + .8vw);
 }
 
 
 header{
 	padding: 10vw;
-	background-image: url("grif.png");
+	background-image: url("../grif.png");
 	background-repeat: no-repeat;
 }
 
@@ -37,7 +37,7 @@ li.nav{
   	list-style-type: none;
 	padding-left: 2vw; 
 	padding-right: 2vw;
-	font-size: 17px;
+	font-size: calc(8px + .8vw);
 	
   	
 }
@@ -74,6 +74,7 @@ body {
 img {
     max-width: 80%;
     max-height: 80%;
+    
 }
 
 #main {
@@ -124,18 +125,18 @@ footer {
 }
 
 .img-caption{
-	font-size: 13px;
+	font-size: calc(6px + .8vw);
 }
 
 .quote #quote em{
 	
 	line-height: 2;
-	font-size: calc(20px + .8vw);
+	font-size: calc(25px + .8vw);
 	font-family: "Snell Roundhand", cursive;
 
 #quote{
 	line-height: 2;
-	font-size: calc(20px + .8vw);
+	font-size: calc(25px + .8vw);
 
 }
 
@@ -146,6 +147,23 @@ footer {
 h2{
 	padding-top: 2vw;
 	}
+	
+img-fluid{
+	max-height: 100%;
+	max-width: 100%;
+
+	}
+div.col-lg-3.col-sm-6{
+	margin: 0;
+	padding: 0;
+
+}
+
+
+
+
+	
+	
 
 
 
