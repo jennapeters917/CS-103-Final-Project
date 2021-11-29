@@ -45,7 +45,7 @@ li.nav{
 .navlink:hover {
 	background-color: saddlebrown;
 	color: white;
-	
+	text-decoration: none;
 	
 }
 
@@ -144,21 +144,8 @@ footer {
 	padding: 1vw;
 }
 
-h2{
-	padding-top: 2vw;
-	}
+
 	
-img-fluid{
-	max-height: 100%;
-	max-width: 100%;
-
-	}
-div.col-lg-3.col-sm-6{
-	margin: 0;
-	padding: 0;
-
-}
-
 
 
 
