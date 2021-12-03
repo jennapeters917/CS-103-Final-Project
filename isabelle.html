@@ -19,7 +19,20 @@ crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet"> 
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-
+<style> 
+.button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+  }
+  .button {border-radius: 12px;}
+  </style>
 
 </head>
 
@@ -96,7 +109,90 @@ crossorigin="anonymous">
 		</div>
 	
 		
-	
+	<div id = "content2" class = "col-lg-6">
+		<h4> An in-the-works demonstration of JS skills </4>
+		<script>
+            function add(){
+                let sum;
+                let input1 = Number(document.getElementById("box1").value);
+                let input2 = Number(document.getElementById("box2").value);
+                sum = input1 + input2;
+                document.getElementById("box3").innerHTML = sum;
+                isNegative(sum);
+            }
+
+            function subtract(){
+                let difference;
+                let input1 = Number(document.getElementById("box1").value);
+                let input2 = Number(document.getElementById("box2").value);
+                difference = input1 - input2;
+                document.getElementById("box3").innerHTML = difference;
+                isNegative(difference);
+            }
+
+            function multiply(){
+                let product;
+                let input1 = Number(document.getElementById("box1").value);
+                let input2 = Number(document.getElementById("box2").value);
+                product = input1*input2;
+                document.getElementById("box3").innerHTML = product;
+                isNegative(product);
+            }
+
+            function divide(){
+                let quotient;
+                let input1 = Number(document.getElementById("box1").value);
+                let input2 = Number(document.getElementById("box2").value);
+                quotient = input1/input2;
+                document.getElementById("box3").innerHTML= quotient;
+                isNegative(quotient);
+            }
+
+            function power(){
+                let power = 1;
+                let input1 = Number(document.getElementById("box1").value);
+                let input2 = Number(document.getElementById("box2").value);
+                for(var i= 1; i <= input2; i= i+1){
+                    power = power*input1;
+                }
+                document.getElementById("box3").innerHTML = power;
+                isNegative(power);
+            }
+
+            function doClear(){
+                document.getElementById("box1").value = " ";
+                document.getElementById("box2").value = " ";
+                document.getElementById("box3").innerHTML = " ";
+           
+           }
+
+           function isNegative(n){
+                if(n<0){
+                    document.getElementById("box3").style.color = "red";
+                }
+                else{
+                    document.getElementById("box3").style.color = "";
+                }
+           }
+</script>
+
+<h5> A calm calculator <3 </h5>
+    <div id="items">
+        <p id="box3"></p>
+        <input type="text" id="box1" class="inputs">
+        <input type="text" id="box2" class="inputs">
+        <button type="button" onclick="doClear()" id="clearB"> clear </button> 
+    </div>
+
+
+    <div id="buttons">
+    <button type="button" onclick="add()"> + </button>
+    <button type="button" onclick="subtract()"> - </button> 
+    <button type="button" onclick="multiply()"> * </button> 
+    <button type="button" onclick="divide()"> / </button> 
+    <button type="button" onclick="power()"> ^ </button>
+
+</div>	
 		
 		
 	</div>
@@ -171,7 +267,7 @@ crossorigin="anonymous">
 		and I know I need to continue on the path I'm on to succeed. And hey, part of the process is understanding that not everyone has the same skillset, and 
 		that's the beauty of this field. No two people will have 100% exact skillsets. Computer science is a beautiful field, and, through time,
 		it is my goal to continue to explore the intricacies and beauty of it to its full potential.</p>
-	<script type="text/javascript" src="https://form.jotform.com/jsform/213356739264058"></script>
+
 		</div>	
 	
 	</div>
@@ -180,17 +276,9 @@ crossorigin="anonymous">
 
 	
 	
-	
-	
-	
-	
-	
-	
-	
 	</div>
 	
 	</div>
-	
 	<footer>
 	<p>The source code and content of this website were created by Jenna Peters, Isabelle Ki and Alexandra Purdy.
 	It is all available for use under a <a href = "https://creativecommons.org/licenses/by/4.0/" style="color:white;">CC-BY</a> license</p>
