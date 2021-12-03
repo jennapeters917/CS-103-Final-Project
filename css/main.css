@@ -99,8 +99,15 @@ img {
 footer {
 	color: white;
 	background-color: #7d8da3;
-	 padding-top: 2vw;
+	padding-top: 2vw;
   	padding-bottom: 2vw;
+  
+
+}
+
+footer p{
+	margin: auto;
+    max-width: 1150px;
 
 }
 
