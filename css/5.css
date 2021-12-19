@@ -53,8 +53,7 @@
   position: relative;
   font-size: 15px;
   background-color: transparent;
-  color: #FFF;
-  
+  color: #FFF;                                 
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;

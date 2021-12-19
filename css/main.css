@@ -12,7 +12,7 @@ header{
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-background-color: #464646;
+	background-color: #464646;
 
 }
 
@@ -30,7 +30,7 @@ background-color: #464646;
 }
 
 #welcome{
-color:#5a6574;
+color:#292e36;
 }
 
 nav{
@@ -52,7 +52,7 @@ li.nav{
 }
 
 .navlink:hover {
-	background-color: #5a6574;
+	background-color: #292e36;
 	color: white;
 	text-decoration: none;
 	
@@ -61,7 +61,7 @@ li.nav{
 .navlink {
 
   text-decoration: none;
-  color: #5a6574;
+  color: #292e36;
   background-color: white;
   padding: 5px 10px 5px 10px;
   transition: background-color 1s;
@@ -73,7 +73,7 @@ body {
     font-style: normal;
     font-weight: 300;
     position: relative;
-    color: #7d8da3;
+    color:#3f4752;
     line-height: 1.7;
     background-color: white;
     
@@ -98,7 +98,7 @@ img {
 
 footer {
 	color: white;
-	background-color: #7d8da3;
+	background-color:#3f4752;
 	padding-top: 2vw;
   	padding-bottom: 2vw;
   
@@ -108,7 +108,13 @@ footer {
 footer p{
 	margin: auto;
     max-width: 1150px;
-    font-size: calc(5px + .8vw);
+    font-size: calc(3px + .8vw);
+
+}
+
+footer a{
+
+	font-size: calc(3px + .8vw);
 
 }
 
@@ -130,9 +136,12 @@ footer p{
 
 }
 
+
 .section1{
-	padding-bottom: 2vw;
+	margin-bottom: 2vw;
 }
+
+
 
 #paper{
 	border: 1px solid black;
@@ -150,6 +159,8 @@ footer p{
 	line-height: 2;
 	font-size: calc(25px + .8vw);
 	font-family: "Snell Roundhand", cursive;
+	
+}
 
 #quote{
 	line-height: 2;
@@ -161,12 +172,67 @@ footer p{
 	padding: 1vw;
 }
 
+.calc-buttons{
+	color: white;
+	background-color:#3f4752;
+	padding: 5px 15px;
+	margin-left: .5vw;
+	margin-right: .5vw;
+	margin-top: .5vw;
+	border: 0px;
+	transition-duration: 0.5s;
+}
 
-a {
+.calc-buttons:hover{
+	background-color: #292e36;
 
 }
 
+input{
+
+	margin: .5vw;
+	padding: .5vw;
+	border: 0px;
+	background-color:#3f4752;
+	color: white;
+	transition-duration: 0.5s;
 	
+
+}
+
+input:hover {
+
+	background-color: #292e36;
+
+}
+
+#calc {
+
+	text-align: left;
+	padding-bottom: 7vw;
+
+}
+
+#buttons{
+
+text-align: left;
+
+}
+
+#result{
+	text-align: left;
+	margin-left: 5px;
+	font-size: calc(15px + .8vw);
+	color: #292e36;
+}
+
+#result2 {
+	text-align: left;
+	margin-left: 5px;
+	font-size: calc(15px + .8vw);
+	color: #292e36;
+}
+
 
  
 

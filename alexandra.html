@@ -30,7 +30,7 @@ crossorigin="anonymous">
 <body>
 
 	<div id = "top-bar">
-	<h2 id = "top-bar-label">Alexandra</h2>
+	<h2>Alexandra</h2>
 	</div>
 
 	<header>
@@ -74,9 +74,14 @@ crossorigin="anonymous">
 			<p>I so excited to continue studying art at Boston University and expand my portfolio over the next four years!</p>    
 			
 	</div>
+	<button type="button" class="collapsible" style = "display: inline-block;">
+	<h2 style = "padding-top: 2vw;">Completed Projects</h2>
+	<p class = "section1">Past pieces I am proud of.</p>
+	</button>
 	
-	<div class = "container-fluid">
+	<div class = "container-fluid" id = "alex-collapse">
 	<div class = "row">
+	
 	
 		<div id = "content1" class = "col-lg-8">
 		<h2> A Gallery of my Work </h2>
@@ -256,11 +261,13 @@ Caran d'Ache Luminance Colored Pencils </a>
 	
 	
 	<div id = "math">
+	<button type="button" class="collapsible" style = "display: inline-block;">
 	<h2 style = "padding-top: 2vw;">Current Projects</h2>
 	<p class = "section1">What I am working on right now!</p>
+	</button>
 
 	
-	<div class = "container-fluid">
+	<div class = "container-fluid" id = "alex-collapse">
 	<div class = "row">
 	
 		<div id = "content1" class = "col-lg-6">
@@ -287,6 +294,51 @@ Caran d'Ache Luminance Colored Pencils </a>
 	
 	</div>
 	</div>
+	
+	<style>
+#alex-collapse {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+}
+
+.collapsible{
+	color: #3f4752;
+	background-color: white;
+	border: 0px;	
+	transition: color 1s;
+	padding-top: 1vw;
+	margin: auto;
+	transition: transform .2s;
+
+}
+
+.collapsible:hover {
+
+	transform: scale(1.2);
+	
+
+}
+</style>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 	
 	
 

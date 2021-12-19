@@ -18,33 +18,172 @@ crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet"> 
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-<style> 
-.button {
-    background-color: #7d8da3;
-    border: none;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-  }
-  .button {border-radius: 12px;
-	  text-align: center}
-.text{text-align: center;
-	text-color: white;}
-.items{text-align: center;}
-.h5{text-align: center;}
-	.h6{text-align: center;}
-  </style>
 
+ <script>
+    function add() {
+    document.getElementById("result2").innerHTML = "";
+      let sum;
+      let input1;
+      let input2;
+      input1 = document.getElementById("box1").value;
+      console.log(input1);
+      input1 = Number(input1);
+      input2 = document.getElementById("box2").value;
+      console.log(input2);
+      input2 = Number(input2);
+      sum = input1 + input2;
+
+      document.getElementById("result").innerHTML = sum;
+    
+    }
+    
+     function subtract() {
+     document.getElementById("result2").innerHTML = "";
+      let sum;
+      let input1;
+      let input2;
+      input1 = document.getElementById("box1").value;
+      console.log(input1);
+      input1 = Number(input1);
+      input2 = document.getElementById("box2").value;
+      console.log(input2);
+      input2 = Number(input2);
+      sum = input1 - input2;
+
+      document.getElementById("result").innerHTML = sum;
+      
+    
+     
+    	
+    }
+    
+     function multiply() {
+     document.getElementById("result2").innerHTML = "";
+      let sum;
+      let input1;
+      let input2;
+      input1 = document.getElementById("box1").value;
+      console.log(input1);
+      input1 = Number(input1);
+      input2 = document.getElementById("box2").value;
+      console.log(input2);
+      input2 = Number(input2);
+      sum = input1 * input2;
+     
+      document.getElementById("result").innerHTML = sum;
+      
+
+    }
+    
+     function divide() {
+     document.getElementById("result2").innerHTML = "";
+      let sum;
+      let input1;
+      let input2;
+      input1 = document.getElementById("box1").value;
+      console.log(input1);
+      input1 = Number(input1);
+      input2 = document.getElementById("box2").value;
+      console.log(input2);
+      input2 = Number(input2);
+      if (input2 == 0){
+      
+      document.getElementById("result").innerHTML = "error";
+      
+      return;
+      	
+      }
+      sum = input1 / input2;
+      
+      document.getElementById("result").innerHTML = sum;
+      
+      
+    }
+    
+      function powers() {
+       document.getElementById("result2").innerHTML = "";
+      let sum;
+      let input1;
+      let input2;
+      input1 = document.getElementById("box1").value;
+      console.log(input1);
+      input1 = Number(input1);
+      input2 = document.getElementById("box2").value;
+      console.log(input2);
+      input2 = Number(input2);
+    	if (input2 == 0){
+      
+      document.getElementById("result").innerHTML = 1;
+      
+      return;
+      	
+      }
+      
+      sum = input1;
+      for (var x = 1; x < input2; x++){
+      sum *= input1;
+      }
+      
+      document.getElementById("result").innerHTML = sum;
+      
+     
+    }
+    
+      function squareRoot() {
+      document.getElementById("box2").innerHTML = "";
+      document.getElementById("result").innerHTML = "";
+      let square;
+      let input1 = Number(document.getElementById("box1").value);
+      if (input1 < 0){
+        
+        document.getElementById("result2").innerHTML = "error";
+        return;
+        
+        }
+      squareroot = Math.pow(input1, 1/2);
+    	document.getElementById("result2").innerHTML = squareroot;
+            }
+            
+    function factorial() {
+    	document.getElementById("box2").innerHTML = "";
+    	document.getElementById("result").innerHTML = "";
+        let input1 = Number(document.getElementById("box1").value);
+        if (input1 < 0){
+        
+        document.getElementById("result2").innerHTML = "error";
+        return;
+        
+        }
+    	var fact = 1;
+    	
+    	for (var i = 1; i <= input1; i++){
+    		fact = fact * i;
+    	}
+    	 document.getElementById("result2").innerHTML = fact;
+    	
+    	
+    
+    }
+    
+    
+    
+     function clearcalc() {   
+      
+      document.getElementById("box1").value = "";
+      document.getElementById("box2").value = "";
+      document.getElementById("result").innerHTML = "";
+       document.getElementById("result2").innerHTML = "";
+     
+      
+      
+    }
+</script>
 </head>
 
 <body>
 
 	<div id = "top-bar">
-	<h2 id = "top-bar-label">Isabelle</h2>
+	<h2>Isabelle</h2>
 	</div>
 
 	<header>
@@ -87,9 +226,10 @@ crossorigin="anonymous">
 		For example, I've been a barista for over two years and am heavily invested in coffee culture, as it's been the best experience I've had. Additionally,
 		I enjoy working on web3 development and building decentralized apps using ReactJS and Solidity meant for Ethereum smart contracts. </p>
 	</div>
-	
+	<button type="button" class="collapsible" style = "display: inline-block;">
 	<h2> From Debates to Lab Sessions </h2>
 	<p class = "section1">Where I started vs where I am now. </p>
+	</button>
 	<div class = "container-fluid">
 	<div class = "row">
 	
@@ -114,90 +254,35 @@ crossorigin="anonymous">
 		</div>
 	
 		
-		<script>
-            function add(){
-                let sum;
-                let input1 = Number(document.getElementById("box1").value);
-                let input2 = Number(document.getElementById("box2").value);
-                sum = input1 + input2;
-                document.getElementById("box3").innerHTML = sum;
-                isNegative(sum);
-            }
 
-            function subtract(){
-                let difference;
-                let input1 = Number(document.getElementById("box1").value);
-                let input2 = Number(document.getElementById("box2").value);
-                difference = input1 - input2;
-                document.getElementById("box3").innerHTML = difference;
-                isNegative(difference);
-            }
+<h4> An in-the-works demo of my JS skills. </h4>
+<p> As I've began to discover my love for coding, I decided to build onto the a calculator assignment I did for CS103.
+You can now use it to compute the factorial of a number, or the square root. It also prevents you from preforming mathematically incorrect operations.</p>
+  <div id = "calc">
+  <input type="text" id = "box1" class = "input-box">
+  <button type="button" onclick = "squareRoot()" class = "calc-buttons"> &#8730;</button>
+  <button type="button" onclick = "factorial()" class = "calc-buttons">!</button>
+  <p id="result2"></p>
 
-            function multiply(){
-                let product;
-                let input1 = Number(document.getElementById("box1").value);
-                let input2 = Number(document.getElementById("box2").value);
-                product = input1*input2;
-                document.getElementById("box3").innerHTML = product;
-                isNegative(product);
-            }
+  <input type="text" id = "box2" class = "input-box">
+  <button type="button" onclick = "add()" class = "calc-buttons">+</button>
+  <button type="button" onclick = "subtract()" class = "calc-buttons">-</button>
+  <button type="button" onclick = "multiply()" class = "calc-buttons">x</button>
+  <button type="button" onclick = "divide()" class = "calc-buttons">&#247;</button>  
+  <button type="button" onclick = "powers()" class = "calc-buttons">^</button>
+  
+ <p id="result"></p>
+  
+   <button type="button" onclick = "clearcalc()" class= "calc-buttons">clear</button>
+  
 
-            function divide(){
-                let quotient;
-                let input1 = Number(document.getElementById("box1").value);
-                let input2 = Number(document.getElementById("box2").value);
-                quotient = input1/input2;
-                document.getElementById("box3").innerHTML= quotient;
-                isNegative(quotient);
-            }
+<br>
+	
+</div>
+	
 
-            function power(){
-                let power = 1;
-                let input1 = Number(document.getElementById("box1").value);
-                let input2 = Number(document.getElementById("box2").value);
-                for(var i= 1; i <= input2; i= i+1){
-                    power = power*input1;
-                }
-                document.getElementById("box3").innerHTML = power;
-                isNegative(power);
-            }
-
-            function doClear(){
-                document.getElementById("box1").value = " ";
-                document.getElementById("box2").value = " ";
-                document.getElementById("box3").innerHTML = " ";
-           
-           }
-
-           function isNegative(n){
-                if(n<0){
-                    document.getElementById("box3").style.color = "red";
-                }
-                else{
-                    document.getElementById("box3").style.color = "";
-                }
-           }
-</script>
-
-<h5> An in-the-works demo of my JS skills. </h5>
-<h6> As I've began to discover my love for coding, I decided to build more onto the calculator from previous labs and this will eventually display squares and square roots. </h6>
-    <div id="items">
-        <p id="box3"></p>
-        <input type="text" id="box1" class="inputs">
-        <input type="text" id="box2" class="inputs">
-        <button type="button" onclick="doClear()" id="clearB"> clear </button> 
-    </div>
-
-
-    <div id="buttons">
-    <button type="button" onclick="add()"> + </button>
-    <button type="button" onclick="subtract()"> - </button> 
-    <button type="button" onclick="multiply()"> * </button> 
-    <button type="button" onclick="divide()"> / </button> 
-    <button type="button" onclick="power()"> ^ </button>
-
-</div>	
-		
+     
+    
 		
 	</div>
 	</div>
@@ -206,8 +291,11 @@ crossorigin="anonymous">
 	
 	<div id = "math">
 	
+	<button type="button" class="collapsible" style = "display: inline-block;">
 	<h2>Keeping a Level Head</h2>
 	<p class = "section1">How I keep my inner peace. </p>
+	</button>
+
 	
 	<div class = "container-fluid">
 	<div class = "row">
@@ -240,8 +328,11 @@ crossorigin="anonymous">
 	</div>
 	
 	
+	<button type="button" class="collapsible" style = "display: inline-block;">
 	<h2>Passions within the field</h2>
 	<p class = "section1">Deep dive into computer science</p>
+	</button>
+	
 	<div class = "container-fluid">
 	<div class = "row">
 	
@@ -255,7 +346,7 @@ crossorigin="anonymous">
 		
 		<img src = "images/solidity.png" alt = "block of solidity code">
 		<p class = "img-caption">The creation of a basic smart contract.</p>
-			<p> <em>pragma solidity >=0.4.0 <0.7.0;</em> are the words that have haunted me for a few months. As I've begun to dive deeper into
+			<p><em>pragma solidity &gt;=0.4.0 &lt;0.7.0;</em> are the words that have haunted me for a few months. As I've begun to dive deeper into
 				aspects of the Ethereum blockchain, I've been working on the creation of a smart contract (a transaction protocol meant to automatically
 				execute when a condition or set of conditions is met), which has been very difficult due to the lackluster documentation provided by Solidity.
 				However, creating a basic smart contract that executed properly has been one of my largest victories thus far, and am excited for more to come. 
@@ -276,6 +367,52 @@ crossorigin="anonymous">
 	
 	</div>
 	</div>
+	
+	<!-- in-line styling to avoid issues with bootstrap  -->
+<style>
+.container-fluid {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+}
+
+.collapsible{
+	color: #3f4752;
+	background-color: white;
+	border: 0px;	
+	transition: color 1s;
+	padding-top: 1vw;
+	margin: auto;
+	transition: transform .2s;
+
+}
+
+.collapsible:hover {
+
+	transform: scale(1.2);
+	
+
+}
+</style>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 	
 
 	

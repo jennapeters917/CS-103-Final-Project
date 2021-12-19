@@ -28,7 +28,7 @@ crossorigin="anonymous">
 <body>
 
 	<div id = "top-bar">
-	<h2 id = "top-bar-label">Jenna</h2>
+	<h2>Jenna</h2>
 	</div>
 
 	<header>
@@ -73,10 +73,13 @@ crossorigin="anonymous">
 			and maybe prove that Math is cool.</p>
 	</div>
 	
-	<h2> Economics </h2>
-	<p class = "section1">The major I started with, and spend the least time with, but care the most about.</p>
+	
+	<button type="button" class="collapsible" style = "display: inline-block;">	<h2> Economics </h2>
+	<p class = "section1">The major I started with, and spend the least time with, but care the most about.</p></button>
+	
 	<div class = "container-fluid">
 	<div class = "row">
+
 	
 		<div id = "content1" class = "col-lg-6">
 		<h4>My Journey Into Economics</h4>
@@ -140,12 +143,13 @@ crossorigin="anonymous">
 	</div>
 	</div>
 	
+
+	
 	
 	
 	<div id = "math">
-	<h2>Math</h2>
-	<p class = "section1">The major I tell people first so they don't ask me what I think about the economy right now.</p>
-	
+	<button type="button" class="collapsible" style = "display: inline-block;"><h2>Math</h2>
+	<p class = "section1">The major I tell people first so they don't ask me what I think about the economy right now.</p></button>
 	<div class = "container-fluid">
 	<div class = "row">
 	
@@ -188,8 +192,9 @@ crossorigin="anonymous">
 	</div>
 	
 	
-	<h2>Computer Science</h2>
-	<p class = "section1">The minor that for some reason takes up the majority of my time.</p>
+	
+	<button type="button" class="collapsible" style = "display: inline-block;"><h2>Computer Science</h2>
+	<p class = "section1">The minor that for some reason takes up the majority of my time.</p></button>
 	<div class = "container-fluid">
 	<div class = "row">
 	
@@ -233,6 +238,52 @@ crossorigin="anonymous">
 	
 	</div>
 	</div>
+	
+<!-- in-line styling to avoid issues with bootstrap  -->
+<style>
+.container-fluid {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+}
+
+.collapsible{
+	color: #3f4752;
+	background-color: white;
+	border: 0px;	
+	transition: color 1s;
+	padding-top: 1vw;
+	margin: auto;
+	transition: transform .2s;
+
+}
+
+.collapsible:hover {
+
+	transform: scale(1.2);
+	
+
+}
+</style>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 	
 	
 	
